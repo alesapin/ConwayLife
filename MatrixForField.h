@@ -28,7 +28,6 @@ public:
 
     void applyRules();
 
-    void setDataFromFile();
     void setSomeData();
     void printData(const vector2d & a) const;
 };

@@ -28,17 +28,6 @@ void MatrixForField::set(int i, int j, State t)
     data[i][j] = t;
 }
 
-void MatrixForField::setDataFromFile()
-{
-    std::ifstream file("/home/alesap/code/cpp/Conavay/data");
-    int a, b;
-    while (!file.eof())
-    {
-        file >> a >> b;
-        data[a / (2 * radius)][b / (2 * radius)] = alive;
-    }
-    file.close();
-}
 State MatrixForField::get(int i, int j) const
 {
     return data[i][j];
