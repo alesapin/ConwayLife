@@ -1,6 +1,6 @@
 #include "MatrixForField.h"
 #include <fstream>
-#include <stdlib.h>
+#include <cstdlib>
 
 MatrixForField::MatrixForField(int height, int length, int radius_)
 {
