@@ -8,6 +8,7 @@ private:
 
 public:
     ConwayLife(int lenght_, int height_, int radius_);
+
     void render();
     void update();
     void initGL();

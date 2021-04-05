@@ -7,6 +7,7 @@ ConwayLife::ConwayLife(int length_, int height_, int radius_)
     , height(height_)
 {
 }
+
 void ConwayLife::render()
 {
     conway.drawField();
@@ -31,6 +32,7 @@ void ConwayLife::initGL()
     glOrtho(0, length, height, 0, 1, -1);
     glMatrixMode(GL_MODELVIEW);
 }
+
 void ConwayLife::initGlut(int argc, char ** argv)
 {
     glutInit(&argc, argv);
@@ -61,9 +63,11 @@ int main(int argc, char ** argv)
     std::cin >> h;
     std::cout << "Введите радиус: ";
     std::cin >> r;
+
     conway_life = std::make_unique<ConwayLife>(l, h, r);
     conway_life->initGlut(argc, argv);
     conway_life->initGL();
+
     glutDisplayFunc(render);
     glutIdleFunc(update);
     glutMainLoop();

@@ -22,6 +22,10 @@ public:
     MatrixForField(int height, int length, int radius_);
     void set(int i, int j, State t);
     State get(int i, int j) const;
+
+    int getRows() const { return row; }
+    int getColumns() const { return column; }
+
     void applyRules();
 
     void setDataFromFile();
